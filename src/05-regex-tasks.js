@@ -80,6 +80,7 @@ function getRegexForPitSpot() {
  */
 function getPasswordValidator(minLength) {
   // It seems to me that something wrong with tests.
+  // return new RegExp(`^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[\\w]{${minLength},}$`);
   return new RegExp(`^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[0-9A-Za-z]{${minLength},}$`);
 }
 
