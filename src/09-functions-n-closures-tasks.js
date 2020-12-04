@@ -159,8 +159,8 @@ function logger(/* func, logFunc */) {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
-function partialUsingArguments(/* fn, ...args1 */) {
-  throw new Error('Not implemented');
+function partialUsingArguments(fn, ...args1) {
+  return (...args2) => fn(...args1.concat(args2));
 }
 
 
@@ -182,11 +182,11 @@ function partialUsingArguments(/* fn, ...args1 */) {
  *   getId10() => 11
  */
 function getIdGeneratorFunction(startFrom) {
-  function* gen() {
-    yield startFrom;
-    yield startFrom + 1;
-  }
-  return gen;
+  let counter = startFrom;
+  return () => {
+    counter += 1;
+    return counter - 1;
+  };
 }
 
 
