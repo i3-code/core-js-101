@@ -415,6 +415,7 @@ function getCommonDirectoryPath(pathes) {
  */
 function getMatrixProduct(/* m1, m2 */) {
   throw new Error('Not implemented');
+  // const ret = new Array(m1.length).fill([]);
 }
 
 
