@@ -590,7 +590,6 @@ function swapHeadAndTail(arr) {
   return result.concat(arr.slice(0, half));
 }
 
-
 module.exports = {
   findElement,
   generateOdds,

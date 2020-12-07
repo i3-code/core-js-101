@@ -113,7 +113,6 @@ function angleBetweenClockHands(date) {
   return Math.abs(degrees * (Math.PI / 180));
 }
 
-
 module.exports = {
   parseDataFromRfc2822,
   parseDataFromIso8601,
