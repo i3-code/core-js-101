@@ -69,7 +69,7 @@ function doubleArray(arr) {
  *    [] => []
  */
 function getArrayOfPositives(arr) {
-  return arr.filter((n) => n >= 1);
+  return arr.filter((n) => n > 0);
 }
 
 /**
@@ -339,7 +339,7 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-  return arr.filter((n) => n > 0).reduce((a, n) => a + n, 0);
+  return arr.reduce((a, n) => a + n, 0);
 }
 
 /**
